@@ -1,0 +1,32 @@
+Scripts do packet.json devem ficar assim:
+
+"scripts": {
+  "start": "npx nodemon --exec ts-node src/index.ts",
+  "typeormMon": "typeorm-ts-node-commonjs -d ./src/database/data_sources/MonDatasource.ts",
+  "migrationMon:run": "npm run typeormMon migration:run",
+  "migrationMon:revert": "npm run typeormMon migration:revert",
+  "migration:create": "typeorm-ts-node-commonjs migration:create"
+  },
+
+
+Comandos:
+
+  "
+  npm run migration:create src/database/migrations/Auth/*name*     
+  
+  npm run migrationMon:run     
+  
+  npm run migrationMon:revert
+  "
+
+
+
+
+  banco de dados monitor interativo:
+
+  "
+  Usuario: SEQ_WMO
+
+  Senha: brasil2022
+  
+  "
