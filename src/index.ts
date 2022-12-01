@@ -1,15 +1,15 @@
 import 'reflect-metadata';
 import express from 'express';
-import { initialize as MonDataSource } from "./database/connections/MonConnection";
+import MonDataSource from './database/data_sources/MonDatasource';
 import routes from './routes'
 import cors from 'cors';
 
-  MonDataSource()
+  MonDataSource.initialize()
   .then(() => {
-    console.log("📦 Data Source Mon has been initialized!");
+    console.log("📦 Data Source SFM has been initialized!");
   })
   .catch((err) => {
-    console.error("Error during Data Source Mon initialization:", err);
+    console.error("Error during Data Source SFM initialization:", err);
   });
 
 const app = express();

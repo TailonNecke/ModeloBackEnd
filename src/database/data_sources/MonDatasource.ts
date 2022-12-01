@@ -8,7 +8,7 @@ const MonDataSource = new DataSource({
     password: 'seq_wmo',
     serviceName: 'APL',
     entities: [
-        "src/app/models/Monitor/*.ts"
+        "src/app/Entity/Monitor/*.ts"
     ],
     migrations: [
         "src/database/migrations/Mon/*.ts"
